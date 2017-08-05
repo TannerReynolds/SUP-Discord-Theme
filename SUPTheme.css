@@ -1,0 +1,2625 @@
+/*
+Most of this shit is just a fork of Crystalline.css by SamuiNe (https://github.com/SamuiNe) with some shit changed to look more streamlined, and less blocky.
+*/
+/* Caution! This theme only works for dark theme for now. It will not work properly at light theme. */
+
+/* This import is not needed unless if you want to use Open Sans font. */
+/* @import 'https://fonts.googleapis.com/css?family=Open+Sans';*/
+@import 'https://wawawa.s-ul.eu/P0JVweBG.otf';
+
+body {
+    -webkit-transition: background 3s ease-in-out;
+    transition: background 3s ease-in-out;
+
+    /* Credits to 晴瀬ひろき for the background picture.
+       Original picture link - http://www.pixiv.net/member_illust.php?mode=medium&illust_id=61282267 */
+    /* If you want to change the background, you can change the background url value. */
+    background: #fff url(http://nuttysu.cc/SUP%20Background.jpg);
+
+    /* It is recommended to set the background-size width to match your monitor's or discord window's width.
+       If the background picture is blurry, please use a bigger sized background picture. */
+    background-size: 100%;
+}
+
+.app, .connecting {
+    /* You can adjust the background brightness by reducing the fourth value of below.
+       0.0 for no dark background, 1.0 for full darkness.
+
+       Or, you can change the other values for tint and so.
+       1st value - Red 0-255
+       2nd value - Green 0-255
+       3rd value - Blue 0-255
+       4th value - Alpha (Opacity) 0.0-1.0 */
+    background: rgba(0, 0, 0, 0.15);
+
+    -webkit-transition: background 0.5s ease-in-out;
+    transition: background 0.5s ease-in-out;
+}
+
+/*
+    To use custom font, please enter the font name enclosed with ' ' at font-family and remove both */ /*.
+*/
+
+*:not(code) {
+    /*font-family: 'NFモトヤバーチ Std W1', 'Open Sans', Whitney, Helvetica, Arial, sans-serif !important;*/
+}
+
+.markup pre code, code * {
+    /*font-family: 'ＭＳ ゴシック', 'Ubuntu Mono', Consolas, Monaco, monospace !important;*/
+    font-size: 13px !important;
+
+    border-radius: 0 !important;
+}
+
+.markup pre, .markup code {
+    /*font-family: 'ＭＳ ゴシック', 'Ubuntu Mono', Consolas, Monaco, monospace !important;*/
+    font-size: 13px;
+    background: rgba(10, 10, 10, 0.7) !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+}
+
+.markup pre code {
+    background: transparent !important;
+}
+
+/* In case anyone wants to change the channel font size, here ya go o/
+   Just need to uncomment these 3 groups. */
+
+/* Channel name font size
+.nameMutedText-1YDcP-,
+.nameMutedVoice-26k4cP,
+.nameDefaultText-QoumjC,
+.nameDefaultVoice-1swZoh,
+.nameLockedText-2fGz07,
+.nameLockedVoice-wNOMNa,
+.nameSelectedText-32NDX5,
+.nameSelectedVoice-XpjYTw,
+.nameUnreadText-1pxldj,
+.nameUnreadVoice-QK4gxH
+{
+    font-size: 13px;
+}
+*/
+
+/* Channel Icon size
+.icon-3tVJnl{
+    width: 12px !important;
+    height: 12px !important;
+}
+*/
+
+/* Connected Voice User font size
+.nameDefault-1I0lx8{
+    font-size: 12px;
+}
+*/
+
+/*
+    Disabling the edited message picture is possible by encapsulating .message-group .comment .edited with both */ /*.
+
+.message-group .comment .edited{
+    font-size: 0;
+    width: 16px !important;
+    height: 16px !important;
+    display: inline-block;
+    background-image: url(https://i.stole-a-me.me/f86e8d.png);
+    background-size: 100%;
+    opacity: 1;
+    line-height: 29px;
+}
+*/
+
+.bot-tag {
+    background: rgba(0, 200, 0, 0) !important;
+    font-size: 0;
+}
+
+.bot-tag::before {
+    content: "Bot";
+    font-size: 12px;
+    background: rgba(0, 108, 200, 0.5) !important;
+    padding: 2px;
+    color: rgba(255, 255, 255, 0.9) !important;
+}
+
+.context-menu{
+    background-color: rgba(42, 42, 42, 0.8)
+}
+
+div.theme-dark.context-menu,
+.theme-dark.context-menu .item,
+div.theme-dark.context-menu.item.item-subMenu{
+    background-color: rgba(42, 42, 42, 0.8);
+    border-radius: 0 !important;
+    border: 0 !important;
+    border-image-width: 0 !important;
+    margin: 0 0 0 0;
+}
+
+.context-menu .item.danger:hover{
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 0;
+}
+
+.theme-dark .layers, .layer{
+    background: transparent !important;
+}
+
+.context-menu .item:hover{
+    background-color: rgba(255, 255, 255, 0.2) !important;
+    border-radius: 0;
+}
+
+.context-menu .item{
+    background-color: rgba(0, 0, 0, 0) !important;
+}
+
+.theme-dark.context-menu{
+    box-shadow: none;
+}
+
+.context-menu{
+    border-radius: 0 !important;
+    border: 0 !important;
+}
+
+.theme-dark.context-menu .context-menu{
+    background-color: rgba(42, 42, 42, 0.8) !important;
+}
+
+.theme-dark .invite-button{
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 0;
+    border-radius: 0;
+}
+
+.invite-button.can-click{
+    border-radius: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+}
+
+.invite-button .invite-button-body,
+.invite-button .invite-button-header{
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.invite-button-body{
+    color: #99aab5 !important;
+}
+
+
+.badge{
+    border-radius: 0;
+    box-shadow: none;
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.95);
+}
+
+.change-log .lead-video, .change-log p>img,
+.change-log .changelog-added,
+.change-log .changelog-added-secondary,
+.change-log .changelog-fixed,
+.change-log .changelog-improved,
+.change-log .changelog-in-progress{
+    border-radius: 0;
+}
+
+.mention{
+    background-color: rgba(179, 224, 255, 0.22);
+}
+
+.need-help-modal .header{
+    border-radius: 0;
+}
+
+.need-help-modal .footer{
+    border: 0;
+    border-radius: 0;
+    background-color: rgba(42, 42, 42, 0.8);
+}
+
+.need-help-modal .header input[type=text]{
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.deprecated-settings-modal .settings-header{
+    background-color: rgba(42, 42, 42, 0.3);
+    border-radius: 0;
+}
+
+.tab-bar.SIDE{
+    overflow: hidden;
+}
+
+.settings .settings-inner:first-child,
+.settings .settings-actions
+{
+    background-color: rgba(42, 42, 42, 0.8);
+    border: 0;
+    border-radius: 0 !important;
+}
+
+.tab-bar.TOP{
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.form .control-group input[type=text],
+.form .control-group input[type=email],
+.form .control-group input[type=password]{
+    padding-left: 8px;
+    color: rgba(255, 255, 255, 0.9);
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 0;
+}
+
+.checkbox .checkbox-inner+span{
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.form .control-group label+.radio-group{
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.has-value>.Select-control>.Select-placeholder{
+    color: rgba(255, 255, 255, 0.8);
+}
+
+div.game-name,
+input.game-input{
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.theme-dark .user-settings-account .view-body{
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.theme-dark .faded-1KRDbu{
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.user-settings-modal-games{
+    background-color: rgba(42, 42, 42, 0.0);
+    border: 0;
+    box-shadow: none;
+}
+
+.user-settings-modal-games .games-table .games-row .item-game,
+.user-settings-modal-games .games-table .games-row .item-overlay{
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.user-settings-modal-locale .select-item .primary{
+    color: rgba(255, 255, 255, 0.9) !important;
+}
+
+#overlay-explanation{
+    background-color: rgba(242, 101, 34, 0.8);
+    border-radius: 0;
+}
+
+.now-playing{
+    border-radius: 0;
+}
+
+.hover-roll div{
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.user-settings-locale .select-item .primary,
+.user-settings-locale .select-item .localized
+{
+    color: rgba(255, 255, 255, 0.8) !important;
+}
+
+.Select-control{
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 0 !important;
+    border-radius: 0;
+}
+
+.is-open>.Select-control{
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.Select-menu-outer{
+    margin-top: 0;
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 0;
+    border-radius: 0;
+}
+
+.form .Select-option{
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.form .Select-option.is-focused{
+    background-color: rgba(255, 255, 255, 0.3);
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.form .control-group label{
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.form .control-groups>.control-group{
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.form hr{
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.settings-connections-wrapper .user-settings-modal-connections .user-settings-modal-accounts-list h3{
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.settings-connections-wrapper .user-settings-modal-connections .user-settings-modal-accounts-list .user-settings-modal-accounts-list-description .user-settings-modal-accounts-list-description-inner{
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.settings-connections-wrapper .user-settings-modal-connections .user-settings-modal-connections-list{
+    box-shadow: none;
+}
+
+.connect-account-btn .connect-account-btn-inner{
+    border-radius: 0;
+}
+
+.settings-connections-wrapper .user-settings-modal-connections .user-settings-modal-connections-list .connection{
+    border-radius: 0;
+}
+
+.settings-connections-wrapper .user-settings-modal-connections .user-settings-modal-connections-list .connection .connection-header .btn-delete{
+    border-radius: 0;
+}
+
+.settings-connections-wrapper .authed-app{
+    border-radius: 0;
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 0;
+}
+
+.settings-connections-wrapper .authed-app .details .header{
+    color: rgba(255, 255, 255, 0.42);
+}
+
+.settings-connections-wrapper .authed-app .header .header-actions .action-btn{
+    border-radius: 0;
+}
+
+.settings-connections-wrapper .authed-app .details .body,
+.settings-connections-wrapper .authed-app .details .body li,
+.settings-connections-wrapper .authed-app .header .app-name{
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.user-settings-modal .account-warning{
+    border-radius: 0;
+    border: 0;
+    background-color: rgba(253, 237, 237, 0.9);
+
+}
+
+.user-settings-modal-keybinds .user-settings-modal-keybinds-header{
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.settings .settings-inner .settings-panel{
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.form .btn-default{
+    background-color: rgba(255, 255, 255, 0.2);
+    color: rgba(255, 255, 255, 0.8);
+    border: 0;
+    padding: 10px;
+}
+
+.form .btn-default:hover{
+    border: 0;
+}
+
+.form .btn-primary{
+    border-radius: 0;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.form header{
+    color: rgba(255, 255, 255, 0.8) !important;
+}
+
+#instant-invite-modal .blurb{
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.instant-invite-modal{
+    background-color: rgba(42, 42, 42, 0.8);
+    border-radius: 0;
+}
+
+.instant-invites .instant-invites-list .instant-invite+.instant-invite{
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.instant-invites .instant-invites-list .instant-invite .member{
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.instant-invites .instant-invites-list .instant-invite .channel{
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.checkbox .checkbox-inner span{
+    border-color: rgba(255, 255, 255, 0.2);
+    border-radius: 0;
+}
+
+.checkbox .checkbox-inner+span{
+    color: rgba(255, 255, 255, 0.5);
+}
+
+#instant-invite-modal .form-inner,
+#instant-invite-modal .form-header,
+#instant-invite-modal .form-actions,
+#instant-invite-modal-advanced .form-inner,
+#instant-invite-modal-advanced .form-actions{
+    background-color: rgba(0, 0, 0, 0);
+}
+
+#permissions ul li{
+    color: rgba(255, 255, 255, 0.8);
+}
+
+#permissions .permission-actions>div{
+    background-color: rgba(255, 255, 255, 0.3);
+    border-color: rgba(0, 0, 0, 0);
+    border-radius: 0;
+}
+
+#permissions .permission-actions.disabled>div{
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: rgba(0, 0, 0, 0);
+}
+
+.form .control-group textarea{
+    background-color: rgba(255, 255, 255, 0.2);
+    color: rgba(255, 255, 255, 0.8);
+    border: 0;
+}
+
+.form .form-header,
+.form .form-inner,
+.form .form-actions
+{
+    background-color: rgba(42, 42, 42, 0.8);
+    color: rgba(255, 255, 255, 0.9);
+    border-radius: 0;
+    border: 0;
+}
+
+.form .form-inner:first-child,
+.form .form-inner:last-child{
+    border-radius: 0;
+}
+
+.alert.form .form-inner .cancel{
+    border-radius: 0;
+}
+
+.alert.form.has-icon:before{
+    border-radius: 0;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+div.control-group .shortcut-recorder input[type=text]{
+    border: 0;
+    border-radius: 0;
+    background-color: rgba(255, 255, 255, 0.2) !important;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.notice.notice-streamer-mode{
+    background-color: rgba(89, 54, 149, 0.5);
+}
+
+.notice.notice-danger{
+    background-color: rgba(240, 71, 71, 0.5);
+}
+
+.notice{
+    background-color: rgba(242, 101, 34, 0.5);
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.notice .btn{
+    background-color: rgba(255, 255, 255, 0.2);
+    color: rgba(255, 255, 255, 0.8);
+    border-radius: 0;
+    border: 0;
+}
+
+.notice .btn:hover{
+    background-color: rgba(255, 255, 255, 0.3);
+    color: rgba(255, 255, 255, 0.9) !important;
+}
+
+.channel-notice.invite{
+    background: url(/assets/bf625d222187f542b9d7179109422e2c.svg) center 20px no-repeat #282b30;
+    background-color: rgba(0, 0, 0, 0.3) !important;
+}
+
+.channel-notices .channel-notice{
+    box-shadow: none;
+}
+
+.channel-notices .channel-notice .message .btn,
+.channel-notices .channel-notice.quickswitcher-notice,
+.channel-notices .channel-notice.guild-mfa-warning{
+    color: rgba(255, 255, 255, 0.9);
+    background-color: rgba(0, 0, 0, 0.42);
+}
+
+.channel-notices .channel-notice .message .btn{
+    border-radius: 0;
+    border: none;
+}
+
+.account {
+    padding-top: 2px;
+    background-color: rgba(0, 0, 0, 0.42) !important;
+    border: 0 !important;
+}
+
+.account .btn-group,
+.account .btn-group .btn {
+    border: 0 !important;
+}
+
+.account .btn-group .btn {
+    border-radius: 15px;
+    background: rgba(0, 0, 0, 0.3) !important;
+    box-shadow: none;
+    outline: 0;
+    border: 0 !important;
+}
+
+.account .btn-group .btn:hover {
+    border-radius: 15px;
+    background: rgba(0, 0, 0, 0.7) !important;
+    box-shadow: 0;
+    border: 0 !important;
+}
+
+.user-settings-security .btn-ghost{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 0;
+    border-radius: 0;
+}
+
+.btn-confirm{
+    border-radius: 0;
+}
+
+.message-group h2 strong{
+    color: rgba(255, 255, 255, 0.95);
+}
+
+.message-group .comment .markup{
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.theme-dark .message-group .embed-wrapper .embed-color-pill{
+    border-radius: 0;
+}
+
+.theme-dark .message-group .embed{
+    background-color: rgba(10, 10, 10, 0.5);
+    border-radius: 0;
+    border: 0;
+}
+
+.message-group .mentioned .message-text:after{
+    border-radius: 0;
+}
+
+.theme-dark .reaction{
+    background-color: rgba(10, 10, 10, 0.3);
+    border-radius: 0;
+}
+
+.message-reactions-modal{
+    background: rgba(255, 255, 0, 0);
+    box-shadow: none;
+}
+
+.message-reactions-modal .message-reactions-list .scroller-wrap{
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 0;
+}
+
+.message-reactions-modal .message-reactions-list-inner{
+    background-color: rgba(0, 0, 0 ,0);
+}
+
+.message-reactions-modal .message-reactions-reactors{
+    background-color: rgba(42, 42, 42, 0.8);
+}
+
+.message-reactions-modal .message-reactions-reactors .reactor{
+    box-shadow: none;
+}
+
+.message-reactions-modal .message-reactions-list-inner .reaction.selected{
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.message-reactions-modal .message-reactions-list-inner .reaction.selected:hover{
+    background-color: rgba(255, 255, 255, 0.25) !important;
+}
+
+.message-reactions-modal .message-reactions-list-inner .reaction{
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 0;
+}
+
+.message-reactions-modal .message-reactions-list-inner .reaction:hover{
+    background-color: rgba(255, 255, 255, 0.15) !important;
+}
+
+.message-reactions-modal .message-reactions-list-inner .reaction .count{
+    color: rgba(255, 255, 255, 0.9);
+}
+.message-reactions-modal .message-reactions-reactors .reactor .name{
+    color: rgba(197, 207, 237, 1);
+}
+
+.theme-dark .channel-textarea-autocomplete-inner header{
+    border: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.channel-textarea-autocomplete-inner header strong{
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.theme-dark .channel-textarea-autocomplete-inner{
+    border: 0;
+    border-radius: 0;
+    background-color: rgba(42, 42, 42, 0.8);
+}
+
+.theme-dark .channel-textarea-autocomplete-inner ul li.active{
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.theme-dark .channel-textarea-autocomplete-inner:after{
+    border: 0;
+}
+
+.channel-textarea-autocomplete-inner:after{
+    border: 0;
+}
+
+.channel-textarea-guard .countdown .countdown-number{
+    background-color: rgba(42, 42, 42, 0.8);
+    border-radius: 0;
+    border: none;
+}
+
+div.message-group-blocked{
+    display: none;
+}
+
+#friends,
+.friends-table,
+.guild-channels,
+.channels-wrap,
+.links,
+.chat,
+.messages-wrapper,
+.title-wrap,
+.content,
+.chat-empty,
+.private-channels,
+.guild-header header,
+.guild-header header:after,
+.typing,
+.divider-red span {
+    background: transparent !important;
+    border: 0 !important;
+}
+
+.scroller-wrap .scroller::-webkit-scrollbar-thumb, .scroller-wrap .scroller::-webkit-scrollbar-track-piece{
+    background-color: rgba(0, 0, 0, 0.42) !important;
+    border: none !important;
+}
+
+.settings .settings-inner .settings-panel{
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* Old voice CSS element?
+#voice-connection .btn-group{
+    border-radius: 0;
+    border: 0;
+}
+
+#voice-connection{
+    border: 0;
+    background-color: rgba(0, 0, 0, 0.42);
+}
+
+#voice-connection .btn-info,
+#voice-connection .btn-disconnect{
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 0;
+    box-shadow: none;
+}
+
+#voice-connection-popout section{
+    background-color: rgba(42, 42, 42, 0.8);
+}
+
+#voice-connection-popout hr{
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.popout{
+    box-shadow: none;
+}
+
+ */
+
+#rtc-connection{
+    background-color: rgba(0, 0, 0, 0.42);
+    border: none;
+}
+
+#rtc-connection .btn-group{
+    border-radius: 0;
+    border: none;
+}
+
+#rtc-connection .btn{
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+#rtc-connection .btn-info{
+    border-radius: 0;
+    border: none;
+}
+
+#rtc-connection .btn-disconnect{
+    box-shadow: none;
+}
+
+#rtc-connection-popout hr{
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+
+#rtc-debug-modal #users-section .user-list{
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+#rtc-debug-modal .diagnostics-checkbox{
+    border-radius: 0;
+}
+
+h3{
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.popout.popout-top section:after, .popout.popout-top-right section:after{
+    border-top-color: #7289da;
+}
+
+.popout section{
+    background-color: rgba(42, 42, 42, 0.8);
+    border-radius: 0 !important;
+}
+
+.popout header,
+.user-popout {
+    border-radius: 0 !important;
+}
+
+.popout header{
+    background-color: rgba(42, 42, 42, 0.8);
+}
+
+.popout-menu{
+    background-color: rgba(42, 42, 42, 0.8);
+    border-radius: 0;
+}
+
+.theme-dark.context-menu .item:hover{
+    background-color: rgba(255, 255, 255, 0.2) !important;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.popout-menu .popout-menu-item.invite:hover,
+.popout-menu .popout-menu-item.leave:hover{
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.popout-menu .popout-menu-item{
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.popout-menu .popout-menu-item:hover{
+    color: rgba(255, 255, 255, 0.9);
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.popout-menu .popout-menu-separator{
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.notification-settings-modal .notification-settings-modal-channel-settings-list{
+    box-shadow: none;
+}
+
+.channel-notification-settings .content label{
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.channel-mute-button{
+    opacity: 0.5;
+}
+
+.channel-notification-settings{
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.small-popout-box{
+    background-color: rgba(42, 42, 42, 0.8);
+    border-radius: 0;
+    border: 0;
+}
+
+.option-popout .btn-item{
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.option-popout .btn-item:hover{
+    background-color: rgba(255, 255, 255, 0.2);
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.modal-content{
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.modal-content .form-inner p{
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.private-channels .channel:hover,
+.private-channels .channel.selected{
+    background: none;
+}
+
+.private-channels .channel:hover{
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.private-channels .channel.selected{
+    background-color: rgba(0, 0, 0, 0.42);
+}
+
+.theme-dark .private-channel-recipients-invite .friend.selected{
+    background: none;
+}
+
+.theme-dark .private-channel-recipients-invite .friend:hover{
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.theme-dark .private-channel-recipients-invite .friend{
+    background: none;
+}
+
+.private-channel-recipients-invite .footer button{
+    border-radius: 0;
+}
+
+.private-channel-call .btn-icon{
+    border-radius: 0;
+}
+
+.private-channel-call .btn-text{
+    border-radius: 0;
+}
+
+.theme-dark .chat .private-channel-call{
+    background-color: rgba(0, 0, 0, 0.5);
+
+    /* You can have your own image here if you want.
+
+    background-image: url('your url here') !important;
+    */
+}
+
+.theme-dark .ui-quick-select-popout{
+    border-radius: 0;
+    background-color: rgba(42, 42, 42, 0.8);
+}
+
+.ui-quick-select-popout-option:hover{
+    background-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+.incoming-call .title{
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.incoming-call .incoming-call-inner{
+    border-radius: 0;
+    background-color: rgba(42, 42, 42, 0.8);
+}
+
+.incoming-call .options .option{
+    border-radius: 0;
+}
+
+.ui-quick-select-popout-option.selected{
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.theme-dark .themed-popout .footer{
+    background: none;
+}
+
+#friends .btn{
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 0;
+}
+
+#friends .friends-empty .btn{
+    border-radius: 0;
+}
+
+#friends .btn:hover{
+    background-color: rgba(255, 255, 255, 0.42);
+}
+
+#friends .friends-header .tab-bar .tab-bar-item {
+    border-radius: 0;
+}
+
+.theme-dark #friends .friends-table .friend-table-add-wrapper .friend-table-add-header{
+    background: 0 0;
+    border: 0;
+}
+
+.add-friend-input-wrapper{
+    border-radius: 0;
+    border: 0;
+}
+
+.theme-dark .add-friend-input-wrapper {
+    background-color: rgba(0, 0, 0, 0.42);
+}
+
+.theme-dark #friends .friends-header .tab-bar .tab-bar-item:hover:not(.selected){
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.theme-dark #friends .friends-table .friends-row .friends-column-actions .friends-action{
+    border-radius: 0;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+#friends .friends-table .friends-row:hover:not(.selected){
+    background-color: rgba(0, 0, 0, 0.2);
+    border: 0;
+    border-radius: 0;
+}
+
+.theme-dark .chat .title-wrap{
+    background-color: transparent !important;
+}
+
+.chat form{
+    box-shadow: none;
+}
+
+.theme-dark .chat .has-more button {
+    background: rgba(0, 0, 0, 0.42);
+    border: 0;
+    border-radius: 0 !important;
+}
+
+.theme-dark .chat .jump-to-present-bar {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 0;
+}
+
+.theme-dark .chat .jump-to-present-bar:hover{
+    background-color: rgba(60, 60, 60, 0.8) !important;
+}
+
+.chat .jump-to-present-bar button{
+    color: rgba(255, 255, 255, 0.8);
+}
+
+
+div.guild-header{
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 57px;
+}
+
+.theme-dark .friends-table .messages .divider:not(.red) div,
+.theme-dark .messages-wrapper .messages .divider:not(.red) div{
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.new-messages-indicator{
+    border-radius: 0;
+}
+
+.new-messages-indicator.bottom{
+    border-radius: 0;
+}
+
+.form .control-groups.control-separator{
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.region-select .region-select-inner,
+.region-select button{
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 0;
+    border: 0;
+}
+
+.region-select-name,
+.region-select button{
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.region-select button:hover{
+    background-color: rgba(255, 255, 255, 0.42);
+    color: rgba(255, 255, 255, 0.95);
+}
+
+.region-select-modal{
+    background-color: rgba(42, 42, 42, 0.8);
+    border-radius: 0;
+}
+
+.region-select-modal .region-select-modal-header{
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.region-select-modal .region-select-modal-option{
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 0;
+    border: 0;
+}
+
+.instant-invites .instant-invites-header{
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.search-bar-tag{
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 0;
+}
+
+.search-bar.search-bar-light .search-bar-inner{
+    background-color: rgba(0, 0, 0, 0.5) !important;
+    border-radius: 0 !important;
+    border: 0;
+}
+
+.search-bar.search-bar-light input{
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.guild-settings-modal-integrations .guild-settings-modal-integrations-header{
+    border-color: rgba(255, 255, 255, 0.2);
+    box-shadow: none;
+}
+
+.guild-settings-modal-integrations .guild-settings-modal-integrations-body.no-integrations p{
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.guild-settings-modal-members{
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.guild-settings-modal-members .guild-settings-modal-members-header .form .Select .Select-value{
+    background-color: rgba(255, 255, 255, 0.2);
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.guild-settings-modal-members .guild-settings-modal-members-header,
+.guild-settings-modal-members .guild-settings-modal-list .member+.member{
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.guild-settings-modal-members .guild-settings-modal-members-footer{
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.theme-dark .guild-settings-members-member .tag{
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.guild-settings-modal .emoji-row .btn+.btn,
+.guild-settings-modal .member-buttons .btn{
+    background-color: rgba(255, 255, 255, 0.2);
+    color: rgba(255, 255, 255, 0.8);
+    border-radius: 0;
+    border: 0;
+}
+
+.guild-settings-modal .member-buttons .btn:hover {
+    background-color: rgba(255, 255, 255, 0.42);
+}
+
+.guild-settings-modal .member-buttons .btn.btn-danger:hover{
+    background-color: rgba(255, 200, 200, 0.42);
+}
+
+.guild-settings-modal .emoji-row .btn.btn-danger,
+.guild-settings-modal .member-buttons .btn.btn-danger{
+    border: 0;
+}
+
+#settings-roles .roles{
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+#settings-roles .roles header{
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+#settings-roles .roles li:hover{
+    background: rgba(255, 255, 255, 0.1) none;
+}
+
+#settings-roles .roles li.selected{
+    background: rgba(255, 255, 255, 0.2) none;
+}
+
+.color-picker .swatches .swatch.large{
+    border-radius: 0;
+}
+
+.color-picker-popout{
+    background-color: rgba(42, 42, 42, 0.8);
+    border-radius: 0;
+    border: 0;
+    box-shadow: none;
+}
+
+.guild-settings-modal-members .guild-settings-modal-list .member .member-username{
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.color-picker-popout input{
+    background-color: rgba(255, 255, 255, 0.2);
+    color: rgba(255, 255, 255, 0.8);
+    border-radius: 0;
+    border: 0;
+}
+
+.color-picker .swatches .swatch.custom:after,
+.color-picker .swatches .swatch.selected:after{
+    border-radius: 0;
+}
+
+.guild-settings-modal-emoji .guild-settings-modal-emoji-header p{
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.guild-settings-modal-emoji .guild-settings-modal-emoji-header,
+.guild-settings-modal-emoji .emoji-row{
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.guild-settings-modal-emoji .emoji-row .emoji-name{
+    border-radius: 0;
+    border: 0;
+}
+
+.guild-settings-modal .emoji-row .btn{
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 0;
+}
+
+.guild-settings-modal .emoji-row .btn.btn-danger:hover{
+    background-color: rgba(255, 200, 200, 0.4);
+}
+
+.clipboard-input-inner{
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 0;
+    border-radius: 0;
+}
+
+.clipboard-input-inner input{
+    background-color: rgba(255, 255, 255, 0);
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.clipboard-input-inner button{
+    background-color: rgba(255, 255, 255, 0.6);
+    border: 0;
+}
+
+.clipboard-input-inner button:first-of-type:before{
+    background: none;
+}
+
+.webhooks .webhooks-header{
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.webhooks .webhook{
+    background-color:rgba(255, 255, 255, 0.2);
+    border-radius: 0;
+    border: 0;
+}
+
+.webhooks .webhook .webhook-header .webhook-details .webhook-name{
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.webhooks .webhook .webhook-header .webhook-details .webhook-created-on{
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.form .btn-clear{
+    background: rgba(255, 255, 255, 0.2);
+    color: rgba(255, 255, 255, 0.8);
+    border-radius: 0;
+    border: 0;
+}
+
+.form .btn-clear:hover{
+    background: rgba(255, 255, 255, 0.4);
+}
+
+.tooltip{
+    border-radius: 0;
+    background-color: rgba(42, 42, 42, 0.8);
+}
+
+.friends-header{
+    background-color: rgba(0, 0, 0, 0.5) !important;
+    height: 57px !important;
+    border: 0 !important;
+}
+
+
+.search-bar{
+    background-color: rgba(0, 0, 0, 0.5);
+    box-shadow: none;
+}
+
+.search-bar.search-bar-light{
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.search-bar .search-bar-inner{
+    border: 0;
+    border-radius: 0;
+}
+
+.guilds-wrapper{
+    background-color: transparent;
+}
+
+.guilds-wrapper .guilds-add{
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.guild-channels .channel-text.selected,
+.guild-channels .channel-text:hover{
+    background-size: 0 0 !important;
+}
+
+.guild-channels .channel-text.selected{
+    background-color: rgba(0, 0, 0, 0.42);
+}
+
+.guild-channels .channel-text:hover{
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.create-guild-container{
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.create-guild-container .create-or-join .form-inner{
+    background-color: rgba(42, 42, 42, 0.8);
+    border-radius: 0;
+}
+
+.create-guild-container .action{
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.create-guild-container .action.create .action-header,
+.create-guild-container .action.join .action-header{
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.theme-dark .channel-members{
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.channel-members-wrap .scroller-wrap .scroller{
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.theme-dark .channel-members .member.popout-open{
+    background: 0 0;
+}
+
+.channel-members .member:hover{
+    background: rgba(0, 0, 0, 0.42) !important;
+}
+
+.theme-dark .channel-members .member.popout-open{
+    background-color: rgba(0, 0, 0, 0.42) !important;
+}
+
+.theme-dark .channel-members .member:not(.disabled).popout-open,
+.theme-dark .channel-members .member:not(.disabled):hover{
+    background: 0 0;
+}
+
+.theme-dark .channel-members .member:hover{
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.member-roles .member-role{
+    color: rgba(255, 255, 255, 0.8);
+    border-radius: 0 !important;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.member-roles .member-role.member-role-add{
+    border-color: rgba(255, 255, 255, 0.3);
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+.user-popout .username-wrapper .discord-tag .username{
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.user-popout .username-wrapper .discord-tag .discriminator{
+    color: rgba(255, 255, 255, 0.75);
+}
+
+#user-profile-modal{
+    border-radius: 0;
+}
+
+#user-profile-modal .btn{
+    border-radius: 0;
+}
+
+#user-profile-modal .header .header-info .header-info-inner .activity{
+    color: rgba(255, 255, 255, 0.42);
+}
+
+#user-profile-modal .guilds .guild:hover{
+    background: rgba(255, 255, 255, 0.2) none;
+}
+
+#user-profile-modal .guilds .guild .guild-name{
+    color: rgba(197, 207, 237, 1)
+}
+
+.note textarea,
+#user-profile-modal .tab-bar .tab-bar-item.selected{
+    border-bottom-color: rgba(255, 255, 255, 0.8);
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.note textarea:focus{
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+#user-profile-modal .guilds .section .section-header,
+#user-profile-modal .tab-bar .tab-bar-item{
+    color: rgba(255, 255, 255, 0.3);
+}
+
+#user-profile-modal .guilds .section+.section{
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+#user-profile-modal .guilds .section .connected-accounts .connected-account{
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 0;
+    border: 0;
+}
+
+#user-profile-modal .guilds .section .connected-accounts .connected-account .connected-account-name-inner .connected-account-name{
+    color: rgba(255, 255, 255, 0.8);
+}
+
+#autocomplete-popout section{
+    background-color: rgba(42, 42, 42, 0.8);
+}
+
+#autocomplete-popout .row.selected{
+    background: none;
+    background-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+#autocomplete-popout header{
+    background-color: rgba(33, 33, 33, 0.9);
+}
+
+#autocomplete-popout .row a,
+#autocomplete-popout .row.selected a,
+#autocomplete-popout .row:hover a{
+    color: rgba(255, 255, 255, 0.8);
+}
+
+#autocomplete-popout .empty h4{
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.embed .image,
+.embed video,
+.embed .embed-video-actions .embed-video-actions-inner{
+    border-radius: 0;
+}
+
+.embed.embed-rich .embed-rich-thumb{
+    border-radius: 0;
+}
+
+.quick-message{
+    border: 0 !important;
+    border-radius: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.quick-message.isBlocked{
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.channel-textarea-guard button{
+    border-radius: 0;
+}
+
+input:disabled{
+    opacity: 0.3;
+}
+
+.markdown-modal{
+    background-color: rgba(42, 42, 42, 0.8);
+    border-radius: 0;
+}
+
+.markdown-modal .markdown-modal-header{
+    border: 0;
+}
+
+.markdown-modal .markdown-modal-footer{
+    border: 0;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.markdown-modal.selectable .scroller{
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.theme-dark .message-group .comment .markup .mention{
+    background-color: rgba(179, 224, 255, 0.1);
+}
+
+.theme-dark .message-group.is-local-bot-message{
+    background: rgba(42, 42, 42, 0.42) none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+    box-shadow: none;
+}
+
+.theme-dark .channel-textarea-inner{
+    border: 0;
+    border-radius: 0;
+    background-color: rgba(0, 0, 0, 0.42);
+}
+
+.theme-dark .channel-textarea-inner .channel-textarea-upload{
+    border: 0;
+}
+
+.guild-header header{
+    box-shadow: none;
+}
+
+.avatar-wrapper {
+    background: rgba(0, 0, 0, 0) !important
+}
+
+.popout .user-popout .body,
+.popout .user-popout .footer {
+    background-color: rgba(42, 42, 42, 0.95) !important;
+    border: 0 !important;
+}
+
+.header::after{
+    background-size: 0 0;
+}
+
+.theme-dark .themed-popout .header,
+.theme-dark .themed-popout{
+    border-radius: 0;
+    border: 0 !important;
+    box-shadow: 0 0;
+}
+
+.theme-dark .themed-popout .header{
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.theme-dark .themed-popout{
+    background-color: rgba(42, 42, 42, 0.8);
+}
+
+
+.theme-dark .messages-popout-wrap .messages-popout .message-group{
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 0;
+    border: 0 !important;
+    box-shadow: 0 0;
+}
+
+.theme-dark .messages-popout-wrap .messages-popout .channel-separator .channel-name{
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.messages-popout .message-group .action-buttons{
+    background-color: rgba(42, 42, 42, 0) !important;
+    background-size: 0 0;
+    box-shadow: none !important;
+}
+
+.messages-popout .message-group .action-buttons:hover{
+    background-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+.theme-dark .themed-popout .text{
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.search-popout{
+    margin-top: 0 !important;
+    background-color: rgba(0, 0, 0, 0);
+}
+.results-group{
+    margin-top: 0 !important;
+}
+
+div.search{
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+div.search-bar{
+    border-radius: 0 !important;
+}
+
+.option strong,
+span.displayed-nick,
+span.answer{
+    color: rgba(197, 207, 237, 1) !important;
+}
+
+span.username{
+    color: rgba(197, 207, 237, 1);
+}
+
+.search-popout{
+    border-radius: 0;
+}
+
+span.filter{
+    color: rgba(179, 224, 255, 1) !important;
+}
+
+span.discriminator{
+    color: rgba(135, 144, 156, 1);
+}
+
+#user-profile-modal .tab-bar-container {
+    background-color: rgba(100, 100, 100, 0.42) !important;
+    border: 0 !important;
+}
+
+#user-profile-modal .empty,
+#user-profile-modal .scroller{
+    background-color: rgba(42, 42, 42, 0.42);
+}
+
+#user-profile-modal header {
+    background: rgba(114, 137, 218, 0.5) !important;
+    border: 0 !important;
+}
+
+#user-profile-modal footer {
+    background: rgba(255, 255, 255, 0.1) !important;
+    border: 0 !important;
+}
+
+#user-profile-modal .header .header-info .header-info-inner .discord-tag .username{
+    color: rgba(255, 255, 255, 0.9)
+}
+
+#user-profile-modal .header .header-info .header-info-inner .discord-tag .discriminator{
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.5)
+}
+
+.messages-wrapper .new-messages-bar {
+    background: rgba(114, 137, 218, 0.5) !important;
+    border-radius: 0;
+}
+
+.theme-dark .messages-wrapper .messages .divider:not(.red) span{
+    background-color: rgba(0, 0, 0, 0);
+    color: rgba(255, 255, 255, 0.5);
+    border-radius: 0 !important;
+}
+
+.chat .divider.divider-red{
+    background-color: rgba(0, 0, 0, 0) !important;
+    z-index: 1 !important;
+}
+
+.theme-dark .friends-table .messages .divider.divider-red>div{
+    background-color: rgba(0, 0, 0, 0) !important;
+}
+
+.theme-dark .messages-wrapper .messages .divider.divider-red>div{
+    background-color: rgba(240, 71, 71, 0) !important;
+}
+
+.theme-dark .messages-wrapper .messages .divider:before{
+    background-color: #eceeef !important;
+    opacity: 0.05;
+}
+
+.theme-dark .messages-wrapper .messages .divider.divider-red>span {
+    margin-left: calc(-100% + 242px);
+    /*margin-top: 19px;*/
+    background-color: rgba(240, 71, 71, 0.35) !important;
+    color: rgb(240, 71, 71);
+    z-index: 1 !important;
+}
+
+.emoji-picker .header{
+    background-color: rgba(0, 0, 0, 0.3);
+    border: 0 !important;
+}
+
+div.emoji-picker{
+    background-color: rgba(42, 42, 42, 0.8);
+    border: 0 !important;
+    border-radius: 0 !important;
+}
+
+.emoji-picker .scroller .emoji-item.selected{
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 0;
+}
+
+input.emoji-name.input{
+    background-color: rgba(255, 255, 255, 0.2) !important;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.guild-settings-modal-emoji .emoji-uploader .emoji-uploader-username{
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.deprecated-settings-modal .settings-inner{
+    background-color: rgba(42, 42, 42, 0.8);
+}
+
+.deprecated-settings-modal .settings-actions{
+    border-radius: 0;
+    background-color: rgba(42, 42, 42, 0.8);
+    border: none;
+}
+
+.notification-settings-modal.deprecated-settings-modal .settings-actions{
+    border-radius: 0;
+}
+
+.notification-settings-modal.deprecated-settings-modal .settings-inner:first-child{
+    border-radius: 0;
+}
+
+
+div.search-header,
+div.search-results-wrap{
+    background-color: rgba(0, 0, 0, 0.2) !important;
+}
+
+div.emoji-picker .sticky-header,
+span.channel-name{
+    background-color: rgba(0, 0, 0, 0.0) !important;
+}
+
+.theme-dark .search .search-bar{
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.theme-dark .search-popout{
+    box-shadow: none !important;
+}
+
+.search-popout .option .non-text{
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.search-popout .search-query{
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 0;
+}
+
+.search-popout .results-group:before{
+    border: 0;
+}
+
+.theme-dark .theme-light .ui-calendar-picker .react-datepicker,
+.theme-light .ui-calendar-picker .react-datepicker{
+    background-color: rgba(0, 0, 0, 0.25);
+}
+
+.theme-dark .theme-light .ui-calendar-picker .react-datepicker__header,
+.theme-light .ui-calendar-picker .react-datepicker__header{
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.search-popout .date-picker{
+    background-color: rgba(0, 0, 0, 0.25);
+    border: 0;
+}
+
+.theme-dark .theme-light .ui-calendar-picker .react-datepicker__current-month,
+.theme-light .ui-calendar-picker .react-datepicker__current-month{
+    background-color: rgba(0, 0, 0, 0) !important;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.theme-dark .theme-light .ui-calendar-picker .react-datepicker__week .react-datepicker__day:last-of-type,
+.theme-light .ui-calendar-picker .react-datepicker__week .react-datepicker__day:last-of-type,
+.theme-dark .theme-light .ui-calendar-picker .react-datepicker__day,
+.theme-light .ui-calendar-picker .react-datepicker__day,
+.theme-dark .theme-light .ui-calendar-picker .react-datepicker__day-name,
+.theme-light .ui-calendar-picker .react-datepicker__day-name{
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.react-datepicker{
+    border-radius: 0;
+    background-color: rgba(42, 42, 42, 0);
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.react-datepicker .react-datepicker__header{
+    background-color:rgba(0, 0, 0, 0);
+}
+
+.react-datepicker .react-datepicker__day--disabled,
+.react-datepicker .react-datepicker__day--outside-month
+{
+    background-color: rgba(255, 255, 255, 0.1) !important;
+    color: rgba(255, 255, 255, 0.42) !important;
+}
+
+.react-datepicker__day{
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.react-datepicker .react-datepicker__current-month{
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.react-datepicker .react-datepicker__day-name{
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.react-datepicker .react-datepicker__day{
+    border: 0;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.search-popout .date-picker .date-picker-hint{
+    background-color: rgba(42, 42, 42, 0);
+    border: 0;
+    border-radius: 0;
+}
+
+.react-datepicker .react-datepicker__navigation.react-datepicker__navigation--next,
+.react-datepicker .react-datepicker__navigation.react-datepicker__navigation--previous{
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 0;
+    border: 0;
+}
+
+.react-datepicker .react-datepicker__month>.react-datepicker__week:first-of-type>.react-datepicker__day:first-of-type,
+.react-datepicker .react-datepicker__month>.react-datepicker__week:last-of-type>.react-datepicker__day:first-of-type,
+.react-datepicker .react-datepicker__month>.react-datepicker__week:last-of-type>.react-datepicker__day:last-of-type,
+.react-datepicker .react-datepicker__month>.react-datepicker__week:first-of-type>.react-datepicker__day:last-of-type{
+    border-radius: 0;
+}
+
+.react-datepicker .react-datepicker__month .react-datepicker__week>.react-datepicker__day:last-of-type,
+.react-datepicker .react-datepicker__month>.react-datepicker__week:last-of-type .react-datepicker__day{
+    border: 0;
+}
+
+.react-datepicker .react-datepicker__day.react-datepicker__day--disabled,
+.react-datepicker .react-datepicker__day.react-datepicker__day--disabled:hover{
+    color: rgba(255, 255, 255, 0.42);
+}
+
+.search-popout .date-picker .date-picker-hint .hint-value{
+    color: rgba(255, 255, 255, 0.9);
+    border-radius: 0;
+}
+
+.react-datepicker .react-datepicker__day.react-datepicker__day--selected:hover,
+.react-datepicker .react-datepicker__day:hover{
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.react-datepicker .react-datepicker__day.react-datepicker__day--today:after{
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+span.search-filter,
+span.search-answer,
+div.jump-button{
+    background-color: rgba(255, 255, 255, 0.2) !important;
+    color: rgba(255, 255, 255, 0.9);
+    border-radius: 0;
+}
+
+.messages-popout .message-group .action-buttons .jump-button{
+    background-color: rgba(0, 0, 0, 0) !important;
+}
+
+div.option.selected{
+    border-radius: 0;
+    background-color: rgba(42, 42, 42, 0.42) !important;
+}
+
+div.results-group{
+    background-color: rgba(0, 0, 0, 0.5) !important;
+    border-radius: 0 !important;
+    border: 0;
+    box-shadow: none !important;
+}
+
+
+.theme-dark .search-results-wrap .scroller-wrap .scroller::-webkit-scrollbar-thumb{
+    background-color: rgba(0, 0, 0, 0.42) !important;
+    border: none !important;
+}
+.theme-dark .search-results-wrap .scroller-wrap .scroller::-webkit-scrollbar-track-piece,
+.scroller-wrap .scroller::-webkit-scrollbar-track-piece{
+    background: rgba(0, 0, 0, 0) !important;
+}
+
+.theme-dark .search-results-wrap .search-header .total-results{
+    color: rgba(255, 255, 255, 0.8);
+    opacity: 1 !important;
+}
+
+.theme-dark .search-results-wrap .search-header .tab.selected{
+    color: rgba(255, 255, 255, 0.8);
+    border-color: rgba(255, 255, 255, 0.8);
+}
+
+span.search-answer{
+    margin-left: 0;
+}
+
+.hide-overflow{
+    overflow: hidden !important;
+    /* padding: 17px 17px 17px 17px !important;*/
+}
+
+.theme-dark .search-results-wrap .search-result .search-result-message.hit,
+.message-group .sink-interactions.clickable{
+    border-radius: 0 !important;
+}
+
+div.option::after,
+div.option.selected::after,
+div.option.user::after,
+div.option.user.selected::after,
+div.option.search-option.selected::after,
+div.option.search-option::after,
+div.option.history::after,
+div.option.history.selected::after
+{
+    background-size: 0 0 !important;
+}
+
+/* search popout */
+
+div.popout.popout-bottom.no-shadow.search-popout{
+    background-color: rgba(42, 42, 42, 0.5) !important;
+}
+
+div.search-result-message.hit{
+    background-color: rgba(0, 0, 0, 0.42) !important;
+    box-shadow: 0 0 !important;
+    border: 0 !important;
+}
+
+div.search-result.expanded{
+    border: 0 !important;
+}
+
+div.search-result::before,
+div.search-result::after
+{
+    background-size: 0 0;
+}
+
+button.btn-stroked{
+    background-color: rgba(255, 255, 255, 0.2);
+    color: rgba(255, 255, 255, 0.8);
+    border: 0;
+    border-radius: 0;
+}
+
+.btn-filled.white{
+    border-radius: 0;
+}
+
+.premium-settings .subscription,
+.premium-settings .payment-method .payment-info .card-tools button,
+.premium-settings .premium-header .premium-options button,
+.premium-settings .subscription,
+.premium-settings .subscription .premium-tools button,
+.premium-payment-modal,
+.premium-payment-modal .premium-animation>svg,
+.premium-payment-modal .premium-payment-form,
+.premium-payment-modal .premium-payment-button,
+.premium-settings .payment-method .payment-info .card-tools .ui-button,
+.fancy-credit-input{
+    border-radius: 0;
+}
+
+.ui-form-title.h2,
+.premium-settings .billing-history-list li .date,
+.premium-settings .billing-history-list li .description,
+.premium-settings .billing-history-list li .payment-details{
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.premium-settings .premium-header{
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.premium-settings .premium-header .premium-options button.btn-clear{
+    background-color: rgba(255, 255, 255, 0.2);
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.premium-settings .premium-header .premium-options button.btn-clear:hover{
+    background-color: rgba(255, 255, 255, 0.42);
+}
+
+.premium-settings .premium-header .premium-options button.btn-clear strong{
+    color: rgba(255, 255, 255, 0.9);
+}
+
+div.card-description,
+div.card-details,
+.premium-settings .payment-method .payment-info .card-info .card-description strong,
+li.completed,
+span.amount {
+    color: rgba(255, 255, 255, 0.8) !important;
+}
+
+.premium-settings .payment-subhead,
+.premium-settings .billing-history .payment-subhead{
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.alert.form.premium-unsubscribe strong,
+.alert.form.premium-upgrade strong{
+    color: rgba(197, 207, 237, 1);
+}
+
+.quickswitcher.dark{
+    background-color: rgba(42, 42, 42, 0.8);
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.qs-tutorial-messages .qs-search-message{
+    opacity: 0.9;
+}
+
+.quickswitcher.dark .big-input{
+    color: rgba(255, 255, 255, 0.9);
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.quickswitcher.dark .scroller-wrap:before{
+    background: 0 #7289da;
+    height: 5px;
+}
+
+.quickswitcher .result .result-display-name,
+.quickswitcher .result .result-username{
+    opacity: 1;
+}
+
+.quickswitcher.dark .result>div .result-match,
+.quickswitcher.dark .result>div .result-type-icon{
+    opacity: 0.9;
+}
+
+.quickswitcher .result .result-display-name{
+    opacity: 1;
+    color: rgba(197, 207, 237, 1);
+}
+
+.quickswitcher .result .result-username{
+    opacity: 1;
+    color: rgba(197, 207, 237, 0.4);
+}
+
+.quickswitcher .result{
+    border-radius: 0;
+}
+
+.quickswitcher.dark .result.selected{
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.quickswitcher.dark .result.selected:after{
+    box-shadow: none;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.quickswitcher.dark .result>div.unread .result-match,
+.quickswitcher.dark .result>div.unread .result-type-icon{
+    opacity: 0.9;
+}
+
+/* PTB and Canary stuff beyond here... for now */
+
+.ui-card{
+    border: none;
+}
+
+.ui-selectable-item{
+    border-radius: 0;
+}
+
+.ui-search-bar{
+    background-color: rgba(0, 0, 0, 0.5) !important;
+    border-radius: 0;
+}
+
+.ui-search-bar .input{
+    border-radius: 0;
+}
+
+.ui-popout-list{
+    border-radius: 0;
+}
+
+.dark-elevation-border-high, .theme-dark .elevation-border-high{
+    background-color: rgba(42, 42, 42, 0.8);
+    box-shadow: none;
+}
+
+.theme-dark .ui-standard-sidebar-view .btn-close{
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.theme-dark .ui-standard-sidebar-view .btn-close:hover{
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.ui-tab-bar.SIDE .ui-tab-bar-item,
+.ui-card,
+.ui-button,
+.ui-radiogroup .ui-card,
+.ui-checkbox-wrapper .ui-checkbox,
+.ui-standard-sidebar-view .btn-close,
+.user-settings-keybinds .ghost-pill,
+.user-settings-games .not-detected,
+.user-settings-games .now-playing,
+.ui-hover-card:before{
+    border-radius: 0;
+    border: none;
+}
+
+.ui-radiogroup .radio-item{
+    border-radius: 0;
+}
+
+.theme-dark .ui-standard-sidebar-view{
+    background: 0 0;
+}
+
+.theme-dark .ui-card-primary{
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.theme-dark .ui-card-primary:not(.editable):not(.outline) .ui-form-text{
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.theme-dark .ui-card-primary.editable{
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.theme-dark .ui-card-primary.editable:hover{
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.theme-dark .ui-card-primary .ui-form-title.h5{
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.theme-dark .ui-radiogroup .desc{
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.theme-dark .ui-standard-sidebar-view .sidebar-region,
+.theme-dark .ui-standard-sidebar-view .sidebar-region .scrollbar{
+    background-color: rgba(0, 0, 0, 0.42);
+}
+
+.theme-dark .ui-standard-sidebar-view .content-region,
+.theme-dark .ui-standard-sidebar-view .content-region .scrollbar{
+    background-color: rgba(0, 0, 0, 0.55);
+}
+
+.theme-dark .ui-hover-card:before{
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.theme-dark .ui-modal,
+.theme-dark .ui-modal-content{
+    background-color: rgba(42, 42, 42, 0.42);
+    border-radius: 0;
+}
+
+.theme-dark .ui-modal-footer{
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.ui-select .Select-menu{
+    border-radius: 0;
+}
+
+.theme-dark .ui-select .Select-option:hover{
+    background-color: rgba(84, 84, 84, 0.8) !important;
+}
+
+.theme-dark .ui-select .Select-option{
+    background-color: rgba(42, 42, 42, 0.8) !important;
+}
+
+.theme-dark .ui-select .Select-control{
+    border-radius: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.Select-option:last-child{
+    border-radius: 0;
+}
+
+.theme-dark .ui-select .Select-menu-outer{
+    background-color: rgba(42, 42, 42, 0);
+    box-shadow: none;
+}
+
+.theme-dark .ui-select .Select-option.is-selected{
+    border-radius: 0;
+    background-color: rgba(42, 42, 42, 0.8);
+}
+
+.theme-dark .ui-select .Select-option.is-selected:hover{
+    border-radius: 0;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.theme-dark .ui-selectable-item:hover{
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.theme-dark .ui-audit-log{
+    background-color: rgba(255, 255, 255, 0.1);
+    border: none;
+}
+
+.ui-audit-log{
+    border-radius: 0;
+}
+
+.theme-dark .ui-audit-log{
+    color: rgba(255, 255, 255, 0.7)
+}
+
+.theme-dark .ui-audit-log .user-hook .discrim{
+    opacity: 0.9;
+}
+
+.theme-dark .ui-audit-log strong{
+    color: rgba(197, 207, 237, 1);
+}
+
+.theme-dark .ui-audit-log .timestamp{
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.dark-elevation-border-low, .theme-dark .elevation-border-low{
+    background-color: rgba(42, 42, 42, 0.8);
+    border: none;
+}
+
+.ui-flex.flex-horizontal-reverse>.ui-flex,
+.ui-flex.flex-horizontal-reverse>.ui-flex-child,
+.ui-flex.flex-horizontal>.ui-flex,
+.ui-flex.flex-horizontal>.ui-flex-child{
+    /*color: rgba(255, 255, 255, 0.9);*/
+}
+
+.ui-flex.flex-horizontal-reverse>.ui-flex-child:last-child,
+.ui-flex.flex-horizontal-reverse>.ui-flex:last-child,
+.ui-flex.flex-horizontal>.ui-flex-child:last-child,
+.ui-flex.flex-horizontal>.ui-flex:last-child{
+    /*color: rgba(255, 255, 255, 0.9);*/
+}
+
+.ui-color-picker-swatch.custom,
+.ui-color-picker-swatch.default,
+.ui-color-picker-swatch{
+    border-radius: 0;
+}
+
+.theme-dark .ui-form-title.h5{
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.theme-dark .ui-form-text.style-description, .theme-dark .ui-form-text.style-label-descriptor{
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.ui-role-list-add{
+    border-radius: 0;
+}
+
+.ui-role-list-role{
+    border-radius: 0;
+}
+
+.roles-list-popout{
+    border-radius: 0;
+    background-color: rgba(42, 42, 42, 0.8);
+}
+
+.ui-flex.flex-horizontal>.ui-flex{
+    margin-right: 0;
+}
+
+.ui-text-input .input{
+    border-radius: 0;
+    border: none;
+}
+.theme-dark .ui-text-input .input,
+.theme-dark .ui-text-input .input.editable:focus,
+.theme-dark .ui-text-input .input.editable:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.ui-button.white.outlined{
+    background-color: rgba(255, 255, 255, 0.1);
+    border: none;
+}
+
+.ui-input-button{
+    border-radius: 0;
+    border: none;
+}
+
+.ui-input-button .ui-input-button-ui-button{
+    border-radius: 0;
+}
+
+.theme-dark .ui-input-button{
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.theme-dark .ui-button.grey.ghost{
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 0;
+}
+
+.theme-dark .ui-text-input.emoji-alias-input .input{
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.theme-dark .ui-card.outline{
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/*
+.ui-standard-sidebar-view, .ui-standard-sidebar-view *{
+    color: rgba(255, 255, 255, 0.9);
+}*/
+
+.user-settings-connections .connection{
+    border-radius: 0;
+}
+
+.user-settings-connections .connection-header{
+    border: none;
+}
+
+.theme-dark .user-settings-notifications .notifications-sound{
+    box-shadow: inset 0 -1px 0 0 rgba(255, 255, 255, 0.2);
+}
+
+.connection-delete{
+    border-radius: 0;
+}
+
+.round-remove-button{
+    top: 0 !important;
+    right: -44px !important;
+    background-color: rgba(255, 255, 255, 0.2) !important;
+    box-shadow: none !important;
+    border-radius: 0;
+}
+
+.mfa-modal .mfa-step{
+    border:none;
+}
+
+.theme-dark .user-settings-games .game {
+    box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.2) !important;
+}
+
+.theme-dark .user-settings-games .game-name-input:focus,
+.theme-dark .user-settings-games .game-name-input:hover{
+    background-color: rgba(255, 255, 255, 0.2);
+    border: none;
+    border-radius: 0;
+}
+
+.theme-dark .user-settings-games .last-played,
+.theme-dark .user-settings-games .overlay-status-text{
+    color: rgba(255, 255, 255, 0.42);
+}
+
+/* New updates from 2017/06/09 */
+.content-2mSKOj{
+    border-radius: 0;
+}
+
+.contentSelectedText-3j5CXt{
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.content-2mSKOj:hover{
+    background-color: rgba(0, 0, 0, 0.25);
+}
+
+.container-RYiLUQ,
+.private-channels .channel.selected a{
+    background-color: rgba(0, 0, 0, 0) !important;
+}
+
+.private-channels .channel:hover a {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.contentHoveredText-2HYGIY,
+.contentHoveredVoice-3qGNKh:active,
+.contentSelectedVoice-gTtYM9:active{
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.header-1tSljs,
+.container-iksrDt,
+.header-1tSljs:hover,
+.popout-open .header-1tSljs{
+    background-color: transparent;
+    border-bottom: 0px !important;
+}
+
+.container-3lnMWU{
+    background-color: transparent;
+    border-bottom: none;
+}
+
+
+.wrapper-2xO9RX{
+    border-radius: 0;
+    box-shadow: none;
+    text-shadow: none;
+}
+
+.wrapper-2ldvyE{
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 0;
+}
+
+.card-3DrRmC{
+    border: none;
+    border-radius: 0;
+}
+
+.theme-dark .cardPrimary-ZVL9Jr{
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.buttonOutlined-38aLSW{
+    border-radius: 0;
+}
+
+.button-2t3of8{
+    border-radius: 0;
+}
+
+.light-elevation-border-high,
+.theme-light .elevation-border-high{
+    background-color: rgba(42, 42, 42, 0.8);
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.ui-new-terms-modal .button-container{
+    background-color: rgba(42, 42, 42, 0.8);
+    border: none;
+}
+
+.theme-light .primary-2giqSn{
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.ui-new-terms-modal .ack{
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.theme-dark .modal-3HOjGZ{
+    border-radius: 0;
+    background-color: rgba(42, 42, 42, 0.8);
+}
+
+.input-2YozMi{
+    border-radius: 0;
+    border: none;
+}
+
+.theme-dark .input-2YozMi{
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.theme-dark .message-25xg43{
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.checkboxBox-2i2Ris{
+    border-radius: 0;
+}
+
+.auditLog-1XsYCj{
+    border-radius: 0;
+    border: none;
+}
+
+.theme-dark .headerClickable-1jGUp8, .theme-dark .headerDefault-1ajMkj{
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.theme-dark .headerExpanded-wW1rBx{
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.theme-dark .divider-ShvCWe{
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.theme-dark .changeDetails-zbf-61{
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.theme-dark .copyInputDefault-36NOFa{
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 0;
+    border: none;
+}
+
+.buttonGreyGhost-SfY7zU{
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.buttonGreyGhost-SfY7zU:hover{
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.item-3879bf{
+    border-radius: 0;
+}
+
+.theme-dark .elevationHigh-3lNfp9{
+    border-radius: 0;
+    background-color: rgba(42, 42, 42, 0.8);
+}
+
+.theme-dark .bubble-17BwqU:before{
+    border-top-color: #7289da;
+}
+
+.grabber-1TZCZi{
+    border-radius: 0;
+}
+
+.theme-dark .bar-2cFRGz{
+    border-radius: 0;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Discord update 2017/7/21 */
+
+.theme-dark .inner-3if5cm{
+    background-color: rgba(0, 0, 0, 0.42);
+    border-radius: 0;
+}
+
+.theme-dark .autocomplete-1TnWNR{
+    background-color: rgba(10, 10, 10, 0.9);
+    border-radius: 0;
+}
+
+.selector-nbyEfM{
+    border-radius: 0;
+}
+
+.theme-dark .selectorSelected-2M0IGv{
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.theme-dark .description-YnaVYa{
+    color: rgba(255, 255, 255, 0.8)
+}
+
+.theme-dark .descriptionUsername-1quCGz{
+    color: rgba(197, 207, 237, 1);
+}
+
+//META{"name":"ThemeFixer","description":"An auto updating theme that fixes themes when Discord updates.","author":"Gimo","version":"1"}*//
+
+@import url(https://rawgit.com/GimoTheBeast/Discord-Theme-Fixes/master/fixesImport/fixesClean.css);
+
