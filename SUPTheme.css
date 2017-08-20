@@ -2619,6 +2619,16 @@ span.amount {
     color: rgba(197, 207, 237, 1);
 }
 
+.body-3rkFrF {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: none;
+}
+
+.footer-2J5zqP {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: none
+}
+
 //META{"name":"ThemeFixer","description":"An auto updating theme that fixes themes when Discord updates.","author":"Gimo","version":"1"}*//
 
 @import url(https://rawgit.com/GimoTheBeast/Discord-Theme-Fixes/master/fixesImport/fixesClean.css);
