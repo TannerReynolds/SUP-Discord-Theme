@@ -206,10 +206,6 @@ div.theme-dark.context-menu.item.item-subMenu{
     border-radius: 0;
 }
 
-.mention{
-    background-color: rgba(179, 224, 255, 0.22);
-}
-
 .need-help-modal .header{
     border-radius: 0;
 }
@@ -621,10 +617,6 @@ div.control-group .shortcut-recorder input[type=text]{
     background-color: rgba(10, 10, 10, 0.5);
     border-radius: 0;
     border: 0;
-}
-
-.message-group .mentioned .message-text:after{
-    border-radius: 0;
 }
 
 .theme-dark .reaction{
@@ -1640,17 +1632,17 @@ span.discriminator{
 }
 
 #user-profile-modal .tab-bar-container {
-    background-color: rgba(100, 100, 100, 0.42) !important;
+    background-color: #35435B !important;
     border: 0 !important;
 }
 
 #user-profile-modal .empty,
 #user-profile-modal .scroller{
-    background-color: rgba(42, 42, 42, 0.42);
+    background-color: rgba(20, 24, 28, 0.95);
 }
 
 #user-profile-modal header {
-    background: rgba(114, 137, 218, 0.5) !important;
+    background: #35435B !important;
     border: 0 !important;
 }
 
@@ -2620,13 +2612,45 @@ span.amount {
 }
 
 .body-3rkFrF {
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(20, 24, 28, 0.95);
     border: none;
 }
 
 .footer-2J5zqP {
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(20, 24, 28, 0.95);
     border: none
+}
+
+.headerNormal-1cioxU {
+    background: #35435B !important;
+}
+
+.avatarNormal-3luwna {
+    border-color: #35435B !important;
+}
+
+.friends-icon {
+    background-image: url(http://penguin.demoted.me/SUP%20Logo.gif) !important;
+    background-size: 75% !important;
+    background-color: #171717 !important;
+}
+
+.context-menu {
+    background-color:rgba(20, 24, 28, 0.95) !important;
+}
+
+.mention{
+    background-color: rgba(53, 67, 91, 0.30) !important;
+}
+
+.message-group .mentioned .message-text:after{
+    border-radius: 0 !important;
+    background: rgba(255, 255, 255, 0.95) !important;
+    border-left: #35435B !important;
+}
+
+.theme-dark .message-group .mentioned .message-text {
+    background: rgba(53, 67, 91, 0.600) !important;
 }
 
 //META{"name":"ThemeFixer","description":"An auto updating theme that fixes themes when Discord updates.","author":"Gimo","version":"1"}*//
