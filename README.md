@@ -8,6 +8,8 @@ Discord Injections: https://github.com/DiscordInjections/DiscordInjections
 
 ![scrn2](http://nuttysu.cc/41d4a.png)
 
-![scrn3](http://penguin.demoted.me/0cd44.png)
+![scrn3](http://penguin.demoted.me/9af69.gif)
 
-![scrn4](http://penguin.demoted.me/35ddd.png)
+![scrn4](http://penguin.demoted.me/0cd44.png)
+
+![scrn5](http://penguin.demoted.me/35ddd.png)
